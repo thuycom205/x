@@ -1,0 +1,62 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="view_config_shopify_cash_on_delivery_form_view">
+        <field name="name">config.phone.number.form</field>
+        <field name="model">config.phone.number</field>
+        <field name="arch" type="xml">
+            <form string="Config_shopify_form">
+            <sheet>
+                <group>
+                    <group>
+                        <field name="country_code"/>
+                    </group>
+                    <group>
+                        <field name="phone_number"/>
+                    </group>
+                </group>
+
+                <group>
+                    <group>
+                        <field name="agent_name"/>
+                    </group>
+                    <group>
+                        <field name="agent_role"/>
+                    </group>
+                </group>
+
+                <group>
+                    <group>
+                        <field name="agent_avatar" widget="image"/>
+                    </group>
+                    <group>
+                        <field name="url_image"/>
+                    </group>
+                </group>
+
+                <group>
+                    <field name="default_note"/>
+                </group>
+
+            </sheet>
+                 <footer>
+                    <button name="confirm" string="Xác nhận" type="object"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="config_phone_number_action">
+      <field name="name">config.phone.number.action.form</field>
+      <field name="res_model">config.phone.number</field>
+      <field name="view_mode">form</field>
+    </record>
+
+
+
+    <menuitem name="shopify app" id="menu_shopify_app"  web_icon="whatsapp,static/description/icon.png"
+                  sequence="45"/>
+
+<!--    <menuitem name="Phone" id="menu_phone" parent="menu_config_shopify_app" action="config_phone_number_action"/>-->
+
+  </data>
+</odoo>
